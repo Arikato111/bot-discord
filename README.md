@@ -1,10 +1,17 @@
-# Bot for Discord
----
+# <p align="center">Bot for Discord</p>
+basic discord bot learning
+
 ## Get started 
-1. create file .env and set `token` from Discord bot
+
+- clone this repository
+- create file .env and set `token` from Discord bot
     ```
     token=<your-token>
     ```
-2. run `npm install` to install packages
+- run `npm install` to install packages
 3. run `npm run dev` to start this bot
----
+
+## Inside it
+
+- discord.js
+- nodemon

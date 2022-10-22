@@ -9,6 +9,12 @@ client.on("ready", () => {
 
 client.on("messageCreate", (msg) => {
   if (!msg.author.bot) {
+    if (msg.content.toLocaleLowerCase().includes("google.com")) {
+      msg.reply("Your message is not allowed.")
+      console.log("DELETE", msg.content, msg.author.username)
+      msg.delete();
+      return;
+    }
     if (msg.content.toLocaleLowerCase() === "hello") {
       msg.reply(`Hello ${msg.author.username}, Have a good day~`);
       return;
@@ -44,9 +50,7 @@ client.on("messageCreate", (msg) => {
           msg.reply("https://github.com/Arikato111/bot-discord");
           return;
         case "time":
-          msg.reply(
-            new Date().toLocaleString('en-US')
-          );
+          msg.reply(new Date().toLocaleString("en-US"));
           return;
       }
     }
